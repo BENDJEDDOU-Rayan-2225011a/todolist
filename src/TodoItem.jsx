@@ -44,7 +44,7 @@ const TodoItem = ({ item, index, deleteTodoItem, completeTodoItem, updateTodoIte
                 {isEditing ? (
                     <input type="text" value={editedValue} onChange={handleChange} onBlur={handleUpdate} autoFocus className="input-todo-label"/>
                 ) : (
-                    <p className={item.complete ? 'completed' : ''}>{item.todo}</p>
+                    <p style={item.complete ? {color: '#8D918D'} : {color: 'white'}}  className={item.complete ? 'completed' : ''}>{item.todo}</p>
                 )}
                 <button className="btn-delete" onClick={displayCalendar}><FaRegCalendarAlt/></button>
                 <button className="btn-delete" onClick={handleEdit}><TfiPencilAlt /></button>
